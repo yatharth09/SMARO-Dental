@@ -1,0 +1,34 @@
+export interface PatientTypes {
+    id: number;
+    patient_report_id: number;
+    patient_name: string;
+    patient_mobile: string;
+    patient_email: string;
+    dob: Date;
+    age:number;
+    gender: string;
+    address: string;
+    ref_code: string;
+    estatus: number;
+    inserted_time: string;
+    patient_id: number;
+    patient_study_id: string;
+    test_type_id: number;
+    test_sub_type_id: string;
+    techniques: string;
+    clinical_history: string | null;
+    clinical_history_file: string | null;
+    results_type: string;
+    doctor_id: number;
+    hospital_id: number;
+    client_login_id: number;
+    doctor_name: string | null;
+    test_type: string;
+    test_sub_type: string;
+    report_status:string;
+    clinical_history_count:number;
+    priority_type:string;
+    comments:string|null;
+    radiologist_id:number;
+    patient_study_instance_id:string;
+}

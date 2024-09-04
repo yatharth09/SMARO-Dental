@@ -1,0 +1,51 @@
+interface ProfileTypes   {
+    id:number;
+    radiologist_name: string;
+    radiologist_image: string;
+    mobile: string;
+    email: string;
+    pincode:string;
+    active_status_id: number;
+    medical_degree_id: string;
+    medical_council_id:number;
+    medical_college_id:number;
+    medical_degree: string;
+    medical_council:string;
+    medical_college:string;
+    medical_degree_file: string;
+    board_cert_file: string;
+    gender: string;
+    age: number;
+    experience: number;
+    address: string;
+    city: string;
+    state_id: number;
+    speciality_id: string;
+    hospital_id: string;
+    inserted_by: number;
+    previous_workspace: string;
+    notable_Projects: string;
+    areas_of_specialization: string;
+    specific_Img_modalities: string;
+    publication_experience: string;
+    medical_license_details: string;
+    regulatory_standards: string;
+    malpractice_insurance_info: string;
+    dicom_standards: string;
+    experience_pacs: string;
+    teleradiology_platforms: string;
+    shift_timings: string;
+    willingness_oncal: string;
+    pref_reporting_format: string;
+    participation_peer_review_programs: string;
+    commitment_quality_assurance_protocols: string;
+    ref_colleagues: string;
+    recom_endorsements: string;
+    comments: string;
+    inserted_time:string;
+    state_name:string;
+    hospital_name:string;
+    speciality:string;
+}
+
+export type {ProfileTypes}

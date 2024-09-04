@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo-icon.svg" id="favIconTag" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smaro - Dental</title>
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="/src/main.tsx"></script>
+<script>
+    const favicon = document.getElementById("favIconTag");
+    const dark = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const changeFavicon = () => {
+        favicon.href = dark.matches ? "./logo-icon-dark.svg" : "/logo-icon.svg";
+    };
+
+
+    // Initial check
+    changeFavicon();
+    // Monitor changes in color scheme preference
+    dark.addEventListener('change', changeFavicon);
+    // Monitor route changes if using a router
+    window.addEventListener('popstate', changeFavicon);
+
+    // Ensure favicon changes correctly on route changes (for single-page applications)
+    document.addEventListener('DOMContentLoaded', () => {
+        const observer = new MutationObserver(changeFavicon);
+        observer.observe(document.getElementById('root'), { childList: true, subtree: true });
+    });
+</script>
+</body>
+</html>
